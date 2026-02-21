@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Wayne Chiu",
   description: personal.tagline,
   icons: {
-    icon: "/icon.png",
+    icon: "/icon.ico",
   },
   openGraph: {
     title: `${personal.name} — ${personal.title}`,
