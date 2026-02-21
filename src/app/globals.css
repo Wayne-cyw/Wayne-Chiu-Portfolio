@@ -13,7 +13,7 @@
 
 html[data-theme-toggling] .amber-btn,
 html[data-theme-toggling] .border-btn {
-  animation: amberFade 1.30s ease forwards;
+  animation: amberFade 1.35s ease forwards;
 }
 
 /* Smooth theme transition — outside any layer so it isn't overridden */

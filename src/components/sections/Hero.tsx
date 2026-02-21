@@ -74,42 +74,47 @@ export default function Hero() {
 
         <motion.div
           variants={item}
-          className="flex flex-wrap items-center justify-center gap-3"
+          className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-3"
         >
-          <button
-            onClick={() => handleScrollTo("projects")}
-            className="border-btn px-8 py-3 rounded-full bg-[var(--amber)] text-black font-semibold text-sm hover:opacity-90 transition-[transform,opacity] hover:scale-105 active:scale-100"
-          >
-            View My Work
-          </button>
-          <a
-            href={personal.resumeUrl}
-            download
-            className="px-8 py-3 rounded-full border border-border font-semibold text-sm hover:border-[var(--amber)] hover:text-[var(--amber)] transition-[transform,opacity] hover:scale-105 active:scale-100"
-          >
-            Download Resume
-          </a>
+          {/* Buttons row */}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => handleScrollTo("projects")}
+              className="border-btn px-8 py-3 rounded-full bg-[var(--amber)] text-black font-semibold text-sm hover:opacity-90 transition-[transform,opacity] hover:scale-105 active:scale-100"
+            >
+              View My Work
+            </button>
+            <a
+              href={personal.resumeUrl}
+              download
+              className="px-8 py-3 rounded-full border border-border font-semibold text-sm hover:border-[var(--amber)] hover:text-[var(--amber)] transition-[transform,opacity] hover:scale-105 active:scale-100"
+            >
+              Download Resume
+            </a>
+          </div>
 
-          {/* Divider */}
+          {/* Divider — desktop only */}
           <span className="w-px h-8 bg-border mx-1 hidden sm:block" />
 
           {/* Social icons */}
-          {[
-            { icon: Mail, href: `mailto:${personal.email}`, label: "Email" },
-            { icon: Linkedin, href: personal.linkedin, label: "LinkedIn" },
-            { icon: Github, href: personal.github, label: "GitHub" },
-          ].map(({ icon: Icon, href, label }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith("mailto") ? undefined : "_blank"}
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="amber-btn w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:border-[var(--amber)] hover:text-[var(--amber)] transition-colors"
-            >
-              <Icon size={17} />
-            </a>
-          ))}
+          <div className="flex items-center gap-3">
+            {[
+              { icon: Mail, href: `mailto:${personal.email}`, label: "Email" },
+              { icon: Linkedin, href: personal.linkedin, label: "LinkedIn" },
+              { icon: Github, href: personal.github, label: "GitHub" },
+            ].map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("mailto") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="amber-btn w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:border-[var(--amber)] hover:text-[var(--amber)] transition-colors"
+              >
+                <Icon size={17} />
+              </a>
+            ))}
+          </div>
         </motion.div>
       </motion.div>
 

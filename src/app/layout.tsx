@@ -21,8 +21,11 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: `${personal.name} — ${personal.title}`,
+  title: "Wayne Chiu",
   description: personal.tagline,
+  icons: {
+    icon: "/icon.png",
+  },
   openGraph: {
     title: `${personal.name} — ${personal.title}`,
     description: personal.tagline,

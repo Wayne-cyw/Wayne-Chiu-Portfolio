@@ -5,7 +5,7 @@ import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 import { projects, type ProjectCategory } from "@/lib/data";
 
-const CATEGORIES: ProjectCategory[] = ["All", "Web", "Other"];
+const CATEGORIES: ProjectCategory[] = ["All", "Web", "ML", "Full-Stack"];
 
 const GRADIENT_PLACEHOLDERS = [
   "from-violet-900/40 to-blue-900/40",
